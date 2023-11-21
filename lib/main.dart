@@ -3,6 +3,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo1/screens/home_screen.dart';
 
+
+
+final List<Map<String, dynamic>> listHashtags = [
+    {
+      'name': '#flutter',
+    },
+    {
+      'name': '#dart',
+    },
+];
+
 void main() {
   runApp(const App());
 }

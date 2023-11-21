@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-
-final List<Map<String, dynamic>> listHashtags = [
-    {
-      'name': '#flutter',
-    },
-    {
-      'name': '#dart',
-    },
-]; 
+ 
+final List<Map<String, dynamic>> listHashtags = [];
 
 class ListHashtagView extends StatelessWidget {
   const ListHashtagView({Key? key}) : super(key: key);

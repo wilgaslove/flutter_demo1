@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo1/components/add_hashtag_component.dart';
 import 'package:flutter_demo1/screens/views/home_view.dart';
 import 'package:flutter_demo1/screens/views/list_hashtag_view.dart';
 
@@ -27,46 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  // Menu pour la création d'un nouveau hashtag.
-  void _modal(BuildContext context) => showModalBottomSheet(
-      context: context,
-      builder: (context) => Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Wrap(
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Créateur d'hashtag",
-                    style: Theme.of(context).textTheme.headline6,
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: TextField(
-                  // composant d'entrer hashtag
-                  decoration: InputDecoration(
-                    hintText: "Entrez votre hashtag",
-                  ),
-                ), 
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end, //pour l'alignement
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("Cancel".toUpperCase()),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("add".toUpperCase()),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ));
+  
 
   @override
   Widget build(BuildContext context) {
@@ -85,12 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
 // Création du button floatan +
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => _modal(context),
-          child: const Icon(
-            Icons.add,
-          ),
-        ),
+        floatingActionButton: const AddHashtagComponent(),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: _currentIndex,
             onTap: (index) {
